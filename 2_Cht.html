@@ -8,49 +8,161 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>國小二年級國語學習教材 - 第七至十二課</title>
+    <title>國小二年級國語課文 - 第七至十二課</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
 
     <style>
 
-        * { font-family: 'Noto Sans TC', sans-serif; }
+        * {
 
-        body { background: linear-gradient(135deg, #fef9f3 0%, #fff5ee 100%); line-height: 1.8; }
+            font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-        .gradient-title { background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        }
 
-        .card { background: white; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s; }
+        body {
 
-        .card:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 
-        .lesson-number { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; width: 3rem; height: 3rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem; }
+            min-height: 100vh;
 
-        .keyword-tag { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; display: inline-block; margin: 0.25rem; }
+        }
 
-        .quote-box { border-left: 4px solid #3b82f6; background: #eff6ff; padding: 1rem 1.5rem; border-radius: 0.5rem; margin: 1.5rem 0; }
+        .content-wrapper {
 
-        .vocab-item { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 0.5rem 1rem; border-radius: 0.5rem; margin: 0.5rem 0; }
+            background: white;
 
-        .activity-box { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); padding: 1.5rem; border-radius: 1rem; margin: 1.5rem 0; }
+            max-width: 900px;
 
-        .thinking-box { background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%); padding: 1.5rem; border-radius: 1rem; border: 2px dashed #9333ea; }
+            margin: 2rem auto;
 
-        .emoji-icon { font-size: 2rem; margin-right: 0.5rem; }
+            border-radius: 20px;
 
-        h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; }
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
 
-        h3 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #1f2937; }
+        }
 
-        p { margin-bottom: 1rem; font-size: 1.125rem; }
+        .lesson-card {
 
-        .section-divider { height: 2px; background: linear-gradient(90deg, transparent, #ff6b6b, transparent); margin: 3rem 0; }
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        }
+
+        .lesson-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+        }
+
+        .quote-style {
+
+            border-left: 4px solid #4299e1;
+
+            background: linear-gradient(to right, #ebf8ff, #ffffff);
+
+            font-style: italic;
+
+        }
+
+        .highlight-box {
+
+            background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+
+            border-left: 5px solid #f6ad55;
+
+        }
+
+        .analysis-section {
+
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+
+        }
+
+        .review-section {
+
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+
+        }
+
+        .discussion-section {
+
+            background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+
+        }
+
+        .number-badge {
+
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+            color: white;
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-weight: bold;
+
+            font-size: 1.5rem;
+
+        }
+
+        h1 {
+
+            font-size: 2.5rem;
+
+            font-weight: 700;
+
+            line-height: 1.3;
+
+            color: #2d3748;
+
+        }
+
+        h3 {
+
+            font-size: 1.75rem;
+
+            font-weight: 600;
+
+            line-height: 1.4;
+
+            color: #2d3748;
+
+        }
+
+        p {
+
+            font-size: 1.125rem;
+
+            line-height: 2;
+
+            color: #4a5568;
+
+        }
+
+        .text-content {
+
+            text-indent: 2em;
+
+        }
+
+        .header-gradient {
+
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+        }
 
     </style>
 
@@ -58,25 +170,21 @@
 
 <body class="py-8 px-4">
 
-    <div class="max-w-4xl mx-auto">
+    <div class="content-wrapper">
 
- 
+        <!-- 頁首 -->
 
-        <!-- 主標題區 -->
+        <header class="header-gradient text-white p-10 rounded-t-2xl text-center">
 
-        <header class="text-center mb-12">
+            <h1 class="mb-4 text-white">📚 國小二年級國語課文</h1>
 
-            <h1 class="gradient-title">🌈 國小二年級國語教材</h1>
+            <p class="text-xl text-white opacity-90">第七至十二課 - 課文分析與補充教材</p>
 
-            <p class="text-xl text-gray-600 mt-4">第七課至第十二課 - 詳細教學補充資料</p>
+            <div class="mt-6 flex justify-center gap-4 text-sm">
 
-            <div class="mt-6 flex justify-center gap-4 flex-wrap">
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">適用年級：二年級</span>
 
-                <span class="keyword-tag">📚 課文分析</span>
-
-                <span class="keyword-tag">✨ 補充教材</span>
-
-                <span class="keyword-tag">🎯 重點回顧</span>
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">課程範圍：第7-12課</span>
 
             </div>
 
@@ -84,625 +192,55 @@
 
  
 
-        <!-- 第七課：傘 -->
+        <!-- 主要內容區 -->
 
-        <article class="card p-8 mb-8">
+        <main class="p-10">
 
-            <div class="flex items-center mb-6">
+            <!-- 第七課 -->
 
-                <div class="lesson-number">7</div>
+            <article class="lesson-card mb-16 p-8 rounded-2xl border-2 border-blue-100">
 
-                <div class="ml-4">
+                <div class="flex items-center gap-4 mb-6">
 
-                    <h3 class="text-2xl font-bold text-gray-800 m-0">傘</h3>
+                    <div class="number-badge">七</div>
 
-                    <p class="text-gray-500 m-0">猜謎遊戲中的文字智慧</p>
-
-                </div>
-
-            </div>
-
- 
-
-            <h3>📖 課文賞析</h3>
-
-            <p>這是一篇充滿趣味的猜謎課文，透過祖孫互動，展現了中文字的圖像美感。「傘」字就像一個大人帶著四個小孩過十字路口，這種形象化的記憶方式，讓孩子更容易理解文字的結構。</p>
-
- 
-
-            <div class="quote-box">
-
-                <p class="font-semibold text-blue-800 m-0">💡 教學重點</p>
-
-                <p class="m-0 mt-2">引導學生觀察「傘」字的字形結構，理解象形文字的趣味性，並學習透過謎語描述事物的特徵。</p>
-
-            </div>
-
- 
-
-            <h3>📝 生字詞語補充</h3>
-
-            <div class="grid grid-cols-2 gap-3">
-
-                <div class="vocab-item">
-
-                    <span class="font-bold">烏雲</span> - 天空中深黑色的雲層
+                    <h3 class="m-0">等兔子來撞樹</h3>
 
                 </div>
 
-                <div class="vocab-item">
-
-                    <span class="font-bold">撐開</span> - 把傘打開、展開
-
-                </div>
-
-                <div class="vocab-item">
-
-                    <span class="font-bold">枴杖</span> - 拐杖，幫助行走的工具
-
-                </div>
-
-                <div class="vocab-item">
-
-                    <span class="font-bold">滴滴答答</span> - 雨滴落下的聲音
-
-                </div>
-
-            </div>
-
  
 
-            <div class="activity-box mt-6">
+                <div class="mb-6">
 
-                <p class="font-bold text-lg mb-3">🎨 延伸活動：我也會猜字謎</p>
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">📖 課文內容</h3>
 
-                <p class="mb-2">請小朋友想一想，下面這個謎語猜的是什麼字？</p>
+                    <div class="space-y-4 text-lg leading-relaxed">
 
-                <p class="italic bg-white p-3 rounded">「一個人，張開雙手，站在木頭上。」</p>
+                        <p class="text-content">一個農夫種了一塊田，田邊長著一棵樹。</p>
 
-                <p class="text-sm text-gray-600 mt-2">（答案：休息的「休」）</p>
+                        <p class="text-content">夏天天氣好，農夫起得早，忙著去除草。除草的工作剛開始，一隻兔子忙趕路，「咚」的一聲撞上樹，農夫幸運得到一隻兔子。</p>
 
-            </div>
-
-        </article>
-
- 
-
-        <!-- 第八課：老園丁的話 -->
-
-        <article class="card p-8 mb-8">
-
-            <div class="flex items-center mb-6">
-
-                <div class="lesson-number">8</div>
-
-                <div class="ml-4">
-
-                    <h3 class="text-2xl font-bold text-gray-800 m-0">老園丁的話</h3>
-
-                    <p class="text-gray-500 m-0">溝通的藝術與同理心</p>
-
-                </div>
-
-            </div>
-
- 
-
-            <h3>📖 課文賞析</h3>
-
-            <p>這篇課文教導我們「如何說話」比「說什麼」更重要。老園丁從命令式的禁止，改成同理心的請求，效果截然不同。這個故事告訴我們，正面的語言更能打動人心。</p>
-
- 
-
-            <div class="quote-box">
-
-                <p class="font-semibold text-blue-800 m-0">💡 教學重點</p>
-
-                <p class="m-0 mt-2">對比兩張布告牌的差異，理解「正面表達」的力量。學習用同理心的角度思考，而非單純的命令禁止。</p>
-
-            </div>
-
- 
-
-            <h3>🔍 深度分析</h3>
-
-            <div class="grid grid-cols-1 gap-4">
-
-                <div>
-
-                    <p class="font-bold text-red-600">❌ 第一張布告牌</p>
-
-                    <p class="bg-red-50 p-3 rounded">「請不要踩草皮，也不要摘花。」→ 命令式、負面表達</p>
-
-                </div>
-
-                <div>
-
-                    <p class="font-bold text-green-600">✅ 第二張布告牌</p>
-
-                    <p class="bg-green-50 p-3 rounded">「喜歡草，就讓它長高，喜歡花，就讓大家都能欣賞它吧！」→ 同理心、正面引導</p>
-
-                </div>
-
-            </div>
-
- 
-
-            <div class="activity-box mt-6">
-
-                <p class="font-bold text-lg mb-3">🎭 角色扮演活動</p>
-
-                <p>請小朋友分組扮演「老園丁」和「遊客」，練習用正面的語言表達，例如：</p>
-
-                <ul class="list-disc list-inside ml-4 mt-2">
-
-                    <li>不要說「不要吵鬧」→ 改說「讓我們輕聲細語，保持安靜」</li>
-
-                    <li>不要說「不要亂丟垃圾」→ 改說「讓我們一起保持環境整潔」</li>
-
-                </ul>
-
-            </div>
-
-        </article>
-
- 
-
-        <!-- 第九課：小小說書人 -->
-
-        <article class="card p-8 mb-8">
-
-            <div class="flex items-center mb-6">
-
-                <div class="lesson-number">9</div>
-
-                <div class="ml-4">
-
-                    <h3 class="text-2xl font-bold text-gray-800 m-0">小小說書人</h3>
-
-                    <p class="text-gray-500 m-0">閱讀分享的樂趣</p>
-
-                </div>
-
-            </div>
-
- 
-
-            <h3>📖 課文賞析</h3>
-
-            <p>這篇課文透過「小光」生動的說書表演，讓我們看到閱讀分享可以多麼有趣！小光不只是說故事，還用道具（帽子）、動作（扶著帽子走）、聲音（學猴子叫）來表演，讓故事活了起來。</p>
-
- 
-
-            <div class="quote-box">
-
-                <p class="font-semibold text-blue-800 m-0">💡 教學重點</p>
-
-                <p class="m-0 mt-2">學習如何介紹一本書，包括：書名、故事大意、精彩片段、推薦理由。培養口語表達和表演能力。</p>
-
-            </div>
-
- 
-
-            <h3>🎪 說書技巧分析</h3>
-
-            <div class="bg-purple-50 p-4 rounded-lg">
-
-                <p class="font-bold mb-2">小光使用的表演技巧：</p>
-
-                <ol class="list-decimal list-inside space-y-2">
-
-                    <li><span class="font-semibold">道具運用</span> - 戴很多帽子，像生日蛋糕</li>
-
-                    <li><span class="font-semibold">動作表演</span> - 扶著帽子慢慢走、抓頭</li>
-
-                    <li><span class="font-semibold">聲音模仿</span> - 學賣帽子的人叫賣、學猴子叫</li>
-
-                    <li><span class="font-semibold">角色轉換</span> - 一會兒演生氣的人，一會兒演猴子</li>
-
-                </ol>
-
-            </div>
-
- 
-
-            <div class="activity-box mt-6">
-
-                <p class="font-bold text-lg mb-3">📚 我的說書計畫</p>
-
-                <p>請小朋友選一本喜歡的書，填寫以下計畫表：</p>
-
-                <div class="bg-white p-4 rounded mt-3">
-
-                    <p>1️⃣ 書名：__________________</p>
-
-                    <p>2️⃣ 最精彩的部分：__________________</p>
-
-                    <p>3️⃣ 我要用什麼方式表演？（道具/動作/聲音）</p>
-
-                    <p>4️⃣ 推薦理由：__________________</p>
-
-                </div>
-
-            </div>
-
-        </article>
-
- 
-
-        <!-- 第十課：點金術 -->
-
-        <article class="card p-8 mb-8">
-
-            <div class="flex items-center mb-6">
-
-                <div class="lesson-number">10</div>
-
-                <div class="ml-4">
-
-                    <h3 class="text-2xl font-bold text-gray-800 m-0">點金術</h3>
-
-                    <p class="text-gray-500 m-0">什麼才是真正珍貴的？</p>
-
-                </div>
-
-            </div>
-
- 
-
-            <h3>📖 課文賞析</h3>
-
-            <p>這是一個經典的寓言故事。國王以為金子是世界上最珍貴的東西，卻在失去摯愛（女兒）後才明白，親情、愛、生命才是無價之寶。這個故事提醒我們要珍惜身邊的人事物。</p>
-
- 
-
-            <div class="quote-box">
-
-                <p class="font-semibold text-blue-800 m-0">💡 教學重點</p>
-
-                <p class="m-0 mt-2">理解「價值觀」的意義，分辨物質與情感的差異。學習故事的因果關係：貪心的願望 → 可怕的後果 → 深刻的領悟。</p>
-
-            </div>
-
- 
-
-            <h3>🎯 故事結構分析</h3>
-
-            <div class="space-y-3">
-
-                <div class="flex items-start">
-
-                    <span class="text-2xl mr-3">1️⃣</span>
-
-                    <div class="flex-1 bg-yellow-50 p-3 rounded">
-
-                        <p class="font-bold">開端</p>
-
-                        <p class="text-sm m-0">國王喜歡金銀珠寶，也喜歡年幼的女兒</p>
+                        <p class="text-content">那天以後，農夫田也不耕，草也不除，天天守著幸運樹，等著兔子來撞樹。從白天等到夜晚，從夏天等到冬天，等啊等，只有北風搖著樹。</p>
 
                     </div>
 
                 </div>
 
-                <div class="flex items-start">
-
-                    <span class="text-2xl mr-3">2️⃣</span>
-
-                    <div class="flex-1 bg-yellow-100 p-3 rounded">
-
-                        <p class="font-bold">發展</p>
-
-                        <p class="text-sm m-0">神給願望，國王許願要點金術</p>
-
-                    </div>
-
-                </div>
-
-                <div class="flex items-start">
-
-                    <span class="text-2xl mr-3">3️⃣</span>
-
-                    <div class="flex-1 bg-orange-50 p-3 rounded">
-
-                        <p class="font-bold">高潮</p>
-
-                        <p class="text-sm m-0">食物變金子、女兒變金像，國王驚覺可怕</p>
-
-                    </div>
-
-                </div>
-
-                <div class="flex items-start">
-
-                    <span class="text-2xl mr-3">4️⃣</span>
-
-                    <div class="flex-1 bg-green-50 p-3 rounded">
-
-                        <p class="font-bold">結局</p>
-
-                        <p class="text-sm m-0">國王請求收回法術，明白許多東西比金子更珍貴</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
  
 
-            <div class="thinking-box mt-6">
+                <div class="analysis-section p-6 rounded-xl mb-6">
 
-                <p class="font-bold text-lg mb-3">💭 深度思考</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">🔍 課文分析</h3>
 
-                <p class="mb-2">如果你是國王，你會許什麼願望？為什麼？</p>
+                    <ul class="space-y-2 text-lg">
 
-                <p class="mb-2">在你心中，什麼東西比金子更珍貴？</p>
+                        <li><strong>成語來源：</strong>「守株待兔」出自《韓非子》，是中國經典寓言故事</li>
 
-                <p class="text-sm text-gray-600 italic">（提示：可以想想家人、健康、友誼、快樂...）</p>
+                        <li><strong>故事結構：</strong>開端（勤勞農夫）→ 轉折（意外收穫）→ 結果（懶惰等待）</li>
 
-            </div>
+                        <li><strong>對比手法：</strong>「忙著去除草」vs「天天守著樹」突顯農夫態度轉變</li>
 
-        </article>
-
- 
-
-        <!-- 第十一課：我喜歡你 -->
-
-        <article class="card p-8 mb-8">
-
-            <div class="flex items-center mb-6">
-
-                <div class="lesson-number">11</div>
-
-                <div class="ml-4">
-
-                    <h3 class="text-2xl font-bold text-gray-800 m-0">我喜歡你</h3>
-
-                    <p class="text-gray-500 m-0">友誼與陪伴的溫暖</p>
-
-                </div>
-
-            </div>
-
- 
-
-            <h3>📖 課文賞析</h3>
-
-            <p>這是一首溫暖的詩，描寫真摯的友誼。真正的朋友不只是一起玩樂，更是在開心時分享快樂，失敗時給予鼓勵，孤單時默默陪伴。這首詩讓我們思考：什麼是真正的友誼？</p>
-
- 
-
-            <div class="quote-box">
-
-                <p class="font-semibold text-blue-800 m-0">💡 教學重點</p>
-
-                <p class="m-0 mt-2">理解友誼的多個面向，學習用具體的例子表達抽象的情感。注意詩歌的重複句型「我喜歡你」營造的韻律感。</p>
-
-            </div>
-
- 
-
-            <h3>❤️ 友誼的四個層次</h3>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-                <div class="bg-pink-50 p-4 rounded-lg">
-
-                    <p class="font-bold text-pink-700">🎉 分享快樂</p>
-
-                    <p class="text-sm">「我開心時，你會跟著我大笑」</p>
-
-                </div>
-
-                <div class="bg-blue-50 p-4 rounded-lg">
-
-                    <p class="font-bold text-blue-700">💪 相互支持</p>
-
-                    <p class="text-sm">「我失敗時，你會鼓勵我重新站起來」</p>
-
-                </div>
-
-                <div class="bg-green-50 p-4 rounded-lg">
-
-                    <p class="font-bold text-green-700">🌈 共同探索</p>
-
-                    <p class="text-sm">「看著朵朵白雲，說說祕密」</p>
-
-                </div>
-
-                <div class="bg-purple-50 p-4 rounded-lg">
-
-                    <p class="font-bold text-purple-700">🤗 陪伴傾聽</p>
-
-                    <p class="text-sm">「講再久的故事，你也都認真聽」</p>
-
-                </div>
-
-            </div>
-
- 
-
-            <div class="activity-box mt-6">
-
-                <p class="font-bold text-lg mb-3">✍️ 創作練習：我的朋友</p>
-
-                <p>仿照課文，寫下你喜歡朋友的理由：</p>
-
-                <div class="bg-white p-4 rounded mt-3">
-
-                    <p>我喜歡你，</p>
-
-                    <p>當我__________時，</p>
-
-                    <p>你會__________。</p>
-
-                    <p class="mt-4">我喜歡你，</p>
-
-                    <p>我們常常一起__________，</p>
-
-                    <p>讓我覺得__________。</p>
-
-                </div>
-
-            </div>
-
-        </article>
-
- 
-
-        <!-- 第十二課：如果，我的房間…… -->
-
-        <article class="card p-8 mb-8">
-
-            <div class="flex items-center mb-6">
-
-                <div class="lesson-number">12</div>
-
-                <div class="ml-4">
-
-                    <h3 class="text-2xl font-bold text-gray-800 m-0">如果，我的房間……</h3>
-
-                    <p class="text-gray-500 m-0">想像力與知足常樂</p>
-
-                </div>
-
-            </div>
-
- 
-
-            <h3>📖 課文賞析</h3>
-
-            <p>這篇課文充滿想像力！作者想像房間可以變成有輪子的移動房、冰屋、果園小屋，但最後發現，最喜歡的還是原來的房間。這告訴我們：想像很美好，但現實中的溫暖與愛才是最珍貴的。</p>
-
- 
-
-            <div class="quote-box">
-
-                <p class="font-semibold text-blue-800 m-0">💡 教學重點</p>
-
-                <p class="m-0 mt-2">學習「假設句型」的運用（如果...就...），培養想像力與創造力，同時理解「知足常樂」的道理。</p>
-
-            </div>
-
- 
-
-            <h3>🏠 想像房間的變化</h3>
-
-            <div class="space-y-3">
-
-                <div class="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-lg flex items-start">
-
-                    <span class="text-3xl mr-3">🚗</span>
-
-                    <div>
-
-                        <p class="font-bold">有輪子的房間</p>
-
-                        <p class="text-sm">目的：去找搬家的朋友玩 → 象徵對友誼的珍惜</p>
-
-                    </div>
-
-                </div>
-
-                <div class="bg-gradient-to-r from-cyan-50 to-blue-100 p-4 rounded-lg flex items-start">
-
-                    <span class="text-3xl mr-3">🧊</span>
-
-                    <div>
-
-                        <p class="font-bold">夏天的冰屋</p>
-
-                        <p class="text-sm">目的：涼快又省電費 → 展現實用的思考</p>
-
-                    </div>
-
-                </div>
-
-                <div class="bg-gradient-to-r from-orange-50 to-yellow-50 p-4 rounded-lg flex items-start">
-
-                    <span class="text-3xl mr-3">🍎</span>
-
-                    <div>
-
-                        <p class="font-bold">秋天的果園房</p>
-
-                        <p class="text-sm">目的：伸手就能摘果子 → 充滿童趣的想像</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
- 
-
-            <h3 class="mt-6">🎯 句型練習</h3>
-
-            <div class="bg-indigo-50 p-4 rounded-lg">
-
-                <p class="font-bold mb-2">「如果...就...」句型</p>
-
-                <ul class="space-y-2">
-
-                    <li>• 如果我的房間<span class="text-blue-600 font-semibold">有四個輪子</span>，我就<span class="text-blue-600 font-semibold">可以開著它到處玩</span>。</li>
-
-                    <li>• 如果我的房間<span class="text-purple-600 font-semibold">是北極的冰屋</span>，我就<span class="text-purple-600 font-semibold">涼快得不得了</span>。</li>
-
-                </ul>
-
-                <p class="mt-4 font-bold">請你也來造句：</p>
-
-                <p class="bg-white p-3 rounded mt-2">如果我的房間__________，我就__________。</p>
-
-            </div>
-
- 
-
-            <div class="thinking-box mt-6">
-
-                <p class="font-bold text-lg mb-3">💭 深度思考</p>
-
-                <p class="mb-2">為什麼作者最後還是最喜歡原來的房間？</p>
-
-                <p class="text-sm italic">（提示：課文寫「早上爸爸叫我起床，白天妹妹陪我玩，晚上媽媽來講故事」→ 家人的愛與陪伴）</p>
-
-            </div>
-
-        </article>
-
- 
-
-        <div class="section-divider"></div>
-
- 
-
-        <!-- 重點回顧 -->
-
-        <section class="card p-8 mb-8 bg-gradient-to-br from-purple-50 to-pink-50">
-
-            <h3 class="text-center text-3xl mb-8">🎯 六課重點回顧</h3>
-
- 
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                <div class="bg-white p-5 rounded-lg shadow-sm">
-
-                    <p class="font-bold text-lg mb-2">📚 語文能力</p>
-
-                    <ul class="space-y-1 text-sm">
-
-                        <li>✓ 認識象形文字（傘）</li>
-
-                        <li>✓ 學習正面表達方式</li>
-
-                        <li>✓ 練習故事介紹技巧</li>
-
-                        <li>✓ 理解寓言故事寓意</li>
-
-                        <li>✓ 詩歌朗讀與欣賞</li>
-
-                        <li>✓ 假設句型運用</li>
+                        <li><strong>時間推移：</strong>「從白天到夜晚」「從夏天到冬天」強調徒勞無功</li>
 
                     </ul>
 
@@ -710,153 +248,645 @@
 
  
 
-                <div class="bg-white p-5 rounded-lg shadow-sm">
+                <div class="quote-style p-6 rounded-xl mb-6">
 
-                    <p class="font-bold text-lg mb-2">❤️ 品格教育</p>
+                    <p class="m-0 text-lg"><strong>💡 學習重點：</strong>這個故事告訴我們，不能依賴偶然的好運，要靠自己的努力才能成功。投機取巧只會一事無成。</p>
 
-                    <ul class="space-y-1 text-sm">
+                </div>
 
-                        <li>✓ 學習同理心與溝通</li>
+ 
 
-                        <li>✓ 愛護環境的觀念</li>
+                <div class="highlight-box p-6 rounded-xl">
 
-                        <li>✓ 閱讀分享的樂趣</li>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">📝 補充教材</h3>
 
-                        <li>✓ 正確的價值觀</li>
+                    <div class="space-y-3 text-lg">
 
-                        <li>✓ 珍惜友誼與陪伴</li>
+                        <p><strong>詞語學習：</strong>幸運、除草、耕田、守株待兔</p>
 
-                        <li>✓ 知足感恩的心</li>
+                        <p><strong>句型練習：</strong>「從……到……」表示時間範圍的延續</p>
+
+                        <p><strong>延伸思考：</strong>在生活中，你有沒有遇過類似的情況？如何避免成為「守株待兔」的人？</p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+ 
+
+            <!-- 第八課 -->
+
+            <article class="lesson-card mb-16 p-8 rounded-2xl border-2 border-green-100">
+
+                <div class="flex items-center gap-4 mb-6">
+
+                    <div class="number-badge" style="background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);">八</div>
+
+                    <h3 class="m-0">角和腳</h3>
+
+                </div>
+
+ 
+
+                <div class="mb-6">
+
+                    <h3 class="text-2xl font-semibold text-green-600 mb-4">📖 課文內容</h3>
+
+                    <div class="space-y-4 text-lg leading-relaxed">
+
+                        <p class="text-content">有一隻口渴的花鹿到河邊喝水。花鹿看見自己在水中的倒影，對四隻又瘦又長的腳很不滿意，卻十分喜歡頭上長得又大又漂亮的角。</p>
+
+                        <p class="text-content">當花鹿看著頭上那對漂亮的角時，一隻獅子追了過來，他嚇得跑進樹林，但是頭上的角被樹枝卡住了。花鹿急得哭了起來，他花了好大的力氣，才從卡住的樹枝中掙脫。眼看獅子快追上了，花鹿加速向前跑，跑了好久，直到看不見獅子，才停下來。</p>
+
+                        <p class="text-content">花鹿一邊大口呼著氣，一邊回頭看了看樹林，說：「沒想到漂亮的角害了我，瘦長的腳卻救了我，不能小看這四隻腳哇！」</p>
+
+                    </div>
+
+                </div>
+
+ 
+
+                <div class="analysis-section p-6 rounded-xl mb-6">
+
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">🔍 課文分析</h3>
+
+                    <ul class="space-y-2 text-lg">
+
+                        <li><strong>寓言主題：</strong>外表美麗不一定實用，實用的東西才是真正有價值的</li>
+
+                        <li><strong>對比手法：</strong>「漂亮的角」vs「瘦長的腳」，美觀與實用的對比</li>
+
+                        <li><strong>情節高潮：</strong>獅子追趕的緊張場景，增加故事張力</li>
+
+                        <li><strong>角色轉變：</strong>花鹿從愛慕外表到認識實用價值的覺悟</li>
 
                     </ul>
 
                 </div>
 
-            </div>
-
  
 
-            <div class="mt-8 bg-white p-6 rounded-lg">
+                <div class="quote-style p-6 rounded-xl mb-6">
 
-                <p class="font-bold text-xl mb-4 text-center">🌟 核心價值</p>
-
-                <div class="flex flex-wrap justify-center gap-3">
-
-                    <span class="bg-red-100 text-red-800 px-4 py-2 rounded-full font-semibold">同理心</span>
-
-                    <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-semibold">創造力</span>
-
-                    <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold">感恩</span>
-
-                    <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-semibold">友愛</span>
-
-                    <span class="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-semibold">知足</span>
-
-                </div>
-
-            </div>
-
-        </section>
-
- 
-
-        <!-- 發人深省的探討 -->
-
-        <section class="card p-8 mb-8 bg-gradient-to-br from-indigo-50 to-purple-50">
-
-            <h3 class="text-center text-3xl mb-8">💭 深度思考與討論</h3>
-
- 
-
-            <div class="space-y-6">
-
-                <div class="thinking-box">
-
-                    <p class="font-bold text-xl mb-3">🌱 問題一：語言的力量</p>
-
-                    <p class="mb-3">從《老園丁的話》中，我們看到同樣的意思，用不同的方式表達，效果完全不同。</p>
-
-                    <p class="font-semibold text-purple-800">思考：在生活中，你曾經因為說話方式而影響別人的心情嗎？我們可以如何用更好的方式表達？</p>
+                    <p class="m-0 text-lg"><strong>💡 學習重點：</strong>不要只看外表，要重視事物的實際用途。生活中許多看似平凡的東西，往往在關鍵時刻發揮重要作用。</p>
 
                 </div>
 
  
 
-                <div class="thinking-box">
+                <div class="highlight-box p-6 rounded-xl">
 
-                    <p class="font-bold text-xl mb-3">💎 問題二：什麼才是真正的財富？</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">📝 補充教材</h3>
 
-                    <p class="mb-3">《點金術》的國王擁有點石成金的能力，卻失去了更重要的東西。</p>
+                    <div class="space-y-3 text-lg">
 
-                    <p class="font-semibold text-purple-800">思考：如果必須選擇，你會選擇擁有很多錢，但沒有朋友？還是選擇不富有，但有很多真心的朋友？為什麼？</p>
+                        <p><strong>詞語學習：</strong>倒影、不滿意、掙脫、卡住</p>
+
+                        <p><strong>句型練習：</strong>「沒想到……卻……」表示意外的轉折</p>
+
+                        <p><strong>延伸閱讀：</strong>伊索寓言《龜兔賽跑》、《狐狸與葡萄》</p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+ 
+
+            <!-- 第九課 -->
+
+            <article class="lesson-card mb-16 p-8 rounded-2xl border-2 border-purple-100">
+
+                <div class="flex items-center gap-4 mb-6">
+
+                    <div class="number-badge" style="background: linear-gradient(135deg, #9f7aea 0%, #805ad5 100%);">九</div>
+
+                    <h3 class="m-0">赤腳國王</h3>
 
                 </div>
 
  
 
-                <div class="thinking-box">
+                <div class="mb-6">
 
-                    <p class="font-bold text-xl mb-3">🤝 問題三：友誼的真諦</p>
+                    <h3 class="text-2xl font-semibold text-purple-600 mb-4">📖 課文內容</h3>
 
-                    <p class="mb-3">《我喜歡你》告訴我們，真正的朋友會在不同情況下陪伴我們。</p>
+                    <div class="space-y-4 text-lg leading-relaxed">
 
-                    <p class="font-semibold text-purple-800">思考：你心目中的好朋友是什麼樣子？你覺得自己是別人的好朋友嗎？</p>
+                        <p class="text-content">赤腳國裡，人人都打赤腳。夏天，地面又熱又燙，大家只好不停的跳！冬天到了，腳也最先知道。</p>
+
+                        <p class="text-content">赤腳國王住在王宮裡，夏天涼快，冬天腳踩在地毯上，十分暖和。外出時，國王都坐在馬車裡，他的腳從來沒有踩過土地。</p>
+
+                        <p class="text-content">有一天，在外面的路上，馬車壞了。國王只能光著腳走回家，才知道外面都是難走的路。</p>
+
+                        <p class="text-content">回到宮裡，他想：要是大家都能走在地毯上，一定會更快樂，但是那得做出多少地毯哪！</p>
+
+                        <p class="text-content">國王請大家想想可以怎麼做。幾個小朋友玩踩高蹺時，想到「隨身地毯」的主意，不管走到哪裡，地毯都跟在腳上。</p>
+
+                        <p class="text-content">他們把這個想法告訴了國王，於是，國王叫人做了好多好「隨身地毯」。從此，大家的腳都能踩在舒服的地毯上了。</p>
+
+                    </div>
 
                 </div>
 
  
 
-                <div class="thinking-box">
+                <div class="analysis-section p-6 rounded-xl mb-6">
 
-                    <p class="font-bold text-xl mb-3">🏡 問題四：想像與現實</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">🔍 課文分析</h3>
 
-                    <p class="mb-3">《如果，我的房間……》讓我們看到，想像很美好，但現實的溫暖更珍貴。</p>
+                    <ul class="space-y-2 text-lg">
 
-                    <p class="font-semibold text-purple-800">思考：你現在擁有的東西中，哪些是你最珍惜的？為什麼我們常常要失去了才懂得珍惜？</p>
+                        <li><strong>創意故事：</strong>解釋「鞋子」發明的趣味故事，激發想像力</li>
+
+                        <li><strong>問題解決：</strong>從「鋪地毯」到「隨身地毯」，展現創新思維</li>
+
+                        <li><strong>民主精神：</strong>國王聆聽人民意見，集思廣益解決問題</li>
+
+                        <li><strong>生活智慧：</strong>改變思維方式，找到更好的解決方案</li>
+
+                    </ul>
 
                 </div>
 
-            </div>
+ 
+
+                <div class="quote-style p-6 rounded-xl mb-6">
+
+                    <p class="m-0 text-lg"><strong>💡 學習重點：</strong>遇到問題要動腦筋思考，換個角度想可能會找到更好的解決方法。小朋友也能提出好主意！</p>
+
+                </div>
 
  
 
-            <div class="mt-8 bg-white p-6 rounded-lg border-4 border-yellow-300">
+                <div class="highlight-box p-6 rounded-xl">
 
-                <p class="font-bold text-2xl text-center mb-4">🌈 給孩子的話</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">📝 補充教材</h3>
 
-                <p class="text-center text-lg leading-relaxed">
+                    <div class="space-y-3 text-lg">
 
-                    親愛的小朋友，這六課告訴我們：<br>
+                        <p><strong>詞語學習：</strong>赤腳、地毯、隨身、踩高蹺</p>
 
-                    <span class="text-blue-600 font-semibold">用心觀察</span>，文字會變得有趣；<br>
+                        <p><strong>創意思考：</strong>生活中還有哪些發明是為了解決問題而產生的？</p>
 
-                    <span class="text-green-600 font-semibold">用愛說話</span>，世界會變得美好；<br>
+                        <p><strong>討論活動：</strong>如果你是國王，你會怎麼幫助人民解決問題？</p>
 
-                    <span class="text-purple-600 font-semibold">珍惜當下</span>，幸福就在身邊；<br>
+                    </div>
 
-                    <span class="text-red-600 font-semibold">真誠待人</span>，友誼會長長久久。<br><br>
+                </div>
 
-                    願你們都能成為有智慧、有愛心的好孩子！❤️
+            </article>
 
-                </p>
+ 
 
-            </div>
+            <!-- 第十課 -->
 
-        </section>
+            <article class="lesson-card mb-16 p-8 rounded-2xl border-2 border-yellow-100">
+
+                <div class="flex items-center gap-4 mb-6">
+
+                    <div class="number-badge" style="background: linear-gradient(135deg, #ecc94b 0%, #d69e2e 100%);">十</div>
+
+                    <h3 class="m-0">去農場玩</h3>
+
+                </div>
+
+ 
+
+                <div class="mb-6">
+
+                    <h3 class="text-2xl font-semibold text-yellow-600 mb-4">📖 課文內容</h3>
+
+                    <div class="space-y-4 text-lg leading-relaxed">
+
+                        <p class="text-content">風和日麗的天氣，媽媽帶我去農場玩。</p>
+
+                        <p class="text-content">走進農場，草原上有成群的羊，有的低著頭靜靜的吃草，有的抬起頭，好像在和我打招呼，非常有趣。近看，大大小小的羊像一堆堆棉花。遠看，白白的羊走在綠綠的草地上，美得像風景畫。</p>
+
+                        <p class="text-content">忽然，我聽見一隻小羊「咩咩咩」的叫了起來，我向牠揮揮手，沒想到牠急忙的跑開了。</p>
+
+                        <p class="text-content">我好想和小羊一起玩，也想多看看農場的景色。但是，天色慢慢黑了，我只好依依不捨的向小羊說再見。</p>
+
+                        <p class="text-content">回家後，我跟爸爸分享這美好的一天，我們說好下次放假時，再去找小羊玩。</p>
+
+                    </div>
+
+                </div>
+
+ 
+
+                <div class="analysis-section p-6 rounded-xl mb-6">
+
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">🔍 課文分析</h3>
+
+                    <ul class="space-y-2 text-lg">
+
+                        <li><strong>記敘文體：</strong>遊記形式，按時間順序記錄農場體驗</li>
+
+                        <li><strong>描寫手法：</strong>運用比喻（像棉花、像風景畫）、擬人（打招呼）</li>
+
+                        <li><strong>遠近對比：</strong>「近看」和「遠看」呈現不同視角的美感</li>
+
+                        <li><strong>情感表達：</strong>「依依不捨」展現孩子對農場的喜愛</li>
+
+                    </ul>
+
+                </div>
+
+ 
+
+                <div class="quote-style p-6 rounded-xl mb-6">
+
+                    <p class="m-0 text-lg"><strong>💡 學習重點：</strong>用心觀察大自然，會發現許多有趣的事物。學習用「近看」「遠看」描寫景物，文章會更生動。</p>
+
+                </div>
+
+ 
+
+                <div class="highlight-box p-6 rounded-xl">
+
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">📝 補充教材</h3>
+
+                    <div class="space-y-3 text-lg">
+
+                        <p><strong>詞語學習：</strong>風和日麗、成群、依依不捨</p>
+
+                        <p><strong>寫作練習：</strong>用「近看」「遠看」描寫一個你喜歡的地方</p>
+
+                        <p><strong>觀察活動：</strong>去戶外觀察動物或植物，記錄有趣的發現</p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+ 
+
+            <!-- 第十一課 -->
+
+            <article class="lesson-card mb-16 p-8 rounded-2xl border-2 border-pink-100">
+
+                <div class="flex items-center gap-4 mb-6">
+
+                    <div class="number-badge" style="background: linear-gradient(135deg, #ed64a6 0%, #d53f8c 100%);">十一</div>
+
+                    <h3 class="m-0">幸福湯圓</h3>
+
+                </div>
+
+ 
+
+                <div class="mb-6">
+
+                    <h3 class="text-2xl font-semibold text-pink-600 mb-4">📖 課文內容</h3>
+
+                    <div class="space-y-4 text-lg leading-relaxed">
+
+                        <p class="text-content"><strong>十二月二十一日 星期日</strong></p>
+
+                        <p class="text-content">今天是冬至，天空下起小雨，我和妹妹的心裡卻升起了小太陽。因為我們滿心期待，要自己動手做湯圓。</p>
+
+                        <p class="text-content">我和妹妹一直盯著媽媽，只見她把白色糯米團和芝麻粉和在一起，變成黑色，再用南瓜粉，把白色糯米團變成黃色。媽媽變出一個個糯米團，有綠色、藍色、粉紅色…… 真是太神奇了！</p>
+
+                        <p class="text-content">妹妹開心的說：「哇！五顏六色的糯米團，好美呀！」媽媽問：「小音，你今天想要做什麼呢？」我笑呵呵的說：「我要做小魚。」妹妹接著說：「我要做小牛。」然後，我們動手做，沒多久，一隻隻可愛的小動物就出現了。</p>
+
+                        <p class="text-content">小小的動物湯圓，包著我們的笑聲，我一口一口吃著，覺得好幸福！</p>
+
+                    </div>
+
+                </div>
+
+ 
+
+                <div class="analysis-section p-6 rounded-xl mb-6">
+
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">🔍 課文分析</h3>
+
+                    <ul class="space-y-2 text-lg">
+
+                        <li><strong>日記格式：</strong>標準日記寫法，包含日期、星期、天氣、事件</li>
+
+                        <li><strong>節慶文化：</strong>介紹冬至吃湯圓的傳統習俗</li>
+
+                        <li><strong>色彩描寫：</strong>「五顏六色」「黑色、黃色、綠色……」視覺豐富</li>
+
+                        <li><strong>親子互動：</strong>全家一起做湯圓，溫馨的家庭氛圍</li>
+
+                    </ul>
+
+                </div>
+
+ 
+
+                <div class="quote-style p-6 rounded-xl mb-6">
+
+                    <p class="m-0 text-lg"><strong>💡 學習重點：</strong>學習日記的寫作格式，記錄生活中的美好時光。和家人一起做事情，會讓幸福感加倍！</p>
+
+                </div>
+
+ 
+
+                <div class="highlight-box p-6 rounded-xl">
+
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">📝 補充教材</h3>
+
+                    <div class="space-y-3 text-lg">
+
+                        <p><strong>詞語學習：</strong>冬至、糯米團、五顏六色、笑呵呵</p>
+
+                        <p><strong>文化知識：</strong>冬至是24節氣之一，吃湯圓象徵團圓和年歲增長</p>
+
+                        <p><strong>寫作練習：</strong>寫一篇日記，記錄你和家人一起做的事</p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+ 
+
+            <!-- 第十二課 -->
+
+            <article class="lesson-card mb-16 p-8 rounded-2xl border-2 border-teal-100">
+
+                <div class="flex items-center gap-4 mb-6">
+
+                    <div class="number-badge" style="background: linear-gradient(135deg, #38b2ac 0%, #2c7a7b 100%);">十二</div>
+
+                    <h3 class="m-0">到野外上課</h3>
+
+                </div>
+
+ 
+
+                <div class="mb-6">
+
+                    <h3 class="text-2xl font-semibold text-teal-600 mb-4">📖 課文內容</h3>
+
+                    <div class="space-y-4 text-lg leading-relaxed">
+
+                        <p class="text-content">到野外上課，大地是課本，小山是模型，蜜蜂、蝴蝶飛呀飛，是活生生的圖片。</p>
+
+                        <p class="text-content">到野外上課，草地是畫紙，樹枝是畫筆，彩虹是顏料，小湖是調色盤。</p>
+
+                        <p class="text-content">到野外上課，去走森林的迷宮，去逛動物的王國，我們一起去找彩色小鳥和魚兒的家園。</p>
+
+                    </div>
+
+                </div>
+
+ 
+
+                <div class="analysis-section p-6 rounded-xl mb-6">
+
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">🔍 課文分析</h3>
+
+                    <ul class="space-y-2 text-lg">
+
+                        <li><strong>詩歌形式：</strong>排比句型，節奏感強，朗朗上口</li>
+
+                        <li><strong>比喻修辭：</strong>大量使用比喻，將自然事物擬人化</li>
+
+                        <li><strong>結構工整：</strong>「到野外上課」反覆出現，形成呼應</li>
+
+                        <li><strong>想像豐富：</strong>「森林的迷宮」「動物的王國」充滿童趣</li>
+
+                    </ul>
+
+                </div>
+
+ 
+
+                <div class="quote-style p-6 rounded-xl mb-6">
+
+                    <p class="m-0 text-lg"><strong>💡 學習重點：</strong>大自然是最好的教室！戶外處處是學問，用心感受就能發現許多驚喜。</p>
+
+                </div>
+
+ 
+
+                <div class="highlight-box p-6 rounded-xl">
+
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">📝 補充教材</h3>
+
+                    <div class="space-y-3 text-lg">
+
+                        <p><strong>修辭練習：</strong>學習排比句型「……是……」</p>
+
+                        <p><strong>仿寫練習：</strong>「到公園玩，_____是_____」</p>
+
+                        <p><strong>戶外教學：</strong>實際到戶外觀察，體會課文意境</p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+ 
+
+            <!-- 重點回顧 -->
+
+            <section class="review-section p-10 rounded-2xl mb-10">
+
+                <h1 class="text-center mb-8 flex items-center justify-center gap-3">
+
+                    <span>🎯</span>
+
+                    <span>重點回顧</span>
+
+                </h1>
+
+ 
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+
+                        <h3 class="text-xl font-bold text-blue-600 mb-4">📚 文體認識</h3>
+
+                        <ul class="space-y-2 text-lg">
+
+                            <li>✓ 寓言故事（第7、8課）</li>
+
+                            <li>✓ 創意故事（第9課）</li>
+
+                            <li>✓ 遊記（第10課）</li>
+
+                            <li>✓ 日記（第11課）</li>
+
+                            <li>✓ 詩歌（第12課）</li>
+
+                        </ul>
+
+                    </div>
+
+ 
+
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+
+                        <h3 class="text-xl font-bold text-green-600 mb-4">✍️ 寫作技巧</h3>
+
+                        <ul class="space-y-2 text-lg">
+
+                            <li>✓ 比喻修辭（像棉花、像風景畫）</li>
+
+                            <li>✓ 排比句型（到野外上課）</li>
+
+                            <li>✓ 對比手法（角與腳）</li>
+
+                            <li>✓ 時間推移（從……到……）</li>
+
+                        </ul>
+
+                    </div>
+
+ 
+
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+
+                        <h3 class="text-xl font-bold text-purple-600 mb-4">💭 品格教育</h3>
+
+                        <ul class="space-y-2 text-lg">
+
+                            <li>✓ 勤勞不懈怠（守株待兔）</li>
+
+                            <li>✓ 重視實用性（角和腳）</li>
+
+                            <li>✓ 創新思考（赤腳國王）</li>
+
+                            <li>✓ 珍惜親情（幸福湯圓）</li>
+
+                        </ul>
+
+                    </div>
+
+ 
+
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+
+                        <h3 class="text-xl font-bold text-orange-600 mb-4">🌟 延伸學習</h3>
+
+                        <ul class="space-y-2 text-lg">
+
+                            <li>✓ 戶外觀察與紀錄</li>
+
+                            <li>✓ 傳統節慶文化</li>
+
+                            <li>✓ 成語故事探索</li>
+
+                            <li>✓ 詩歌朗誦與創作</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+ 
+
+            <!-- 探討與省思 -->
+
+            <section class="discussion-section p-10 rounded-2xl">
+
+                <h1 class="text-center mb-8 flex items-center justify-center gap-3">
+
+                    <span>🤔</span>
+
+                    <span>探討與省思</span>
+
+                </h1>
+
+ 
+
+                <div class="space-y-8">
+
+                    <div class="bg-white bg-opacity-80 p-6 rounded-xl">
+
+                        <h3 class="text-2xl font-bold text-indigo-600 mb-4">❓ 思考問題</h3>
+
+                        <ol class="space-y-4 text-lg list-decimal list-inside">
+
+                            <li class="leading-relaxed"><strong>關於「守株待兔」：</strong>生活中有哪些事情需要努力，不能只靠運氣？</li>
+
+                            <li class="leading-relaxed"><strong>關於「角和腳」：</strong>你覺得什麼比較重要？外表漂亮還是實用？為什麼？</li>
+
+                            <li class="leading-relaxed"><strong>關於「赤腳國王」：</strong>當你遇到問題時，會怎麼想辦法解決？</li>
+
+                            <li class="leading-relaxed"><strong>關於大自然：</strong>你最喜歡到哪裡戶外活動？為什麼？</li>
+
+                            <li class="leading-relaxed"><strong>關於家庭：</strong>和家人一起做什麼事情會讓你感到幸福？</li>
+
+                        </ol>
+
+                    </div>
+
+ 
+
+                    <div class="bg-white bg-opacity-80 p-6 rounded-xl">
+
+                        <h3 class="text-2xl font-bold text-rose-600 mb-4">💬 親子討論</h3>
+
+                        <p class="text-lg leading-relaxed mb-4">家長可以透過以下方式，和孩子一起深入探討課文：</p>
+
+                        <ul class="space-y-3 text-lg">
+
+                            <li>🗨️ <strong>分享經驗：</strong>說說自己小時候學到的寓言故事</li>
+
+                            <li>🗨️ <strong>實際體驗：</strong>帶孩子到農場、公園實地觀察</li>
+
+                            <li>🗨️ <strong>動手做：</strong>一起做湯圓或其他傳統點心</li>
+
+                            <li>🗨️ <strong>創意延伸：</strong>鼓勵孩子改編故事或創作詩歌</li>
+
+                        </ul>
+
+                    </div>
+
+ 
+
+                    <div class="bg-white bg-opacity-80 p-6 rounded-xl">
+
+                        <h3 class="text-2xl font-bold text-teal-600 mb-4">🌈 教學小叮嚀</h3>
+
+                        <p class="text-lg leading-relaxed">
+
+                            這六課涵蓋了不同的文體和主題，從寓言故事到生活體驗，從節慶文化到大自然探索。
+
+                            希望孩子們不只是學習字詞和句型，更能從課文中學到做人處事的道理，
+
+                            培養觀察力、想像力和創造力。<br><br>
+
+                            最重要的是，讓孩子感受到學習的樂趣，在閱讀中發現生活的美好！
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
 
  
 
         <!-- 頁尾 -->
 
-        <footer class="text-center text-gray-500 mt-12 pb-8">
+        <footer class="header-gradient text-white text-center p-8 rounded-b-2xl">
 
-            <p class="text-sm">✨ 國小二年級國語補充教材 ✨</p>
+            <p class="text-lg mb-2">📖 用心學習 · 快樂成長 📖</p>
 
-            <p class="text-xs mt-2">設計理念：活潑、有趣、生動，激發學習熱情</p>
+            <p class="text-sm opacity-75">國小二年級國語課文教材 © 2025</p>
 
         </footer>
-
- 
 
     </div>
 
